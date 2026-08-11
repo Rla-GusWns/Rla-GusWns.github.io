@@ -15,7 +15,16 @@
   text simply spans the full width.
 {% endcomment %}
 
-{% assign paper_link = post.paperurl | default: post.url | prepend: base_path %}
+{% comment %}
+  paperurl is already absolute, so base_path must only be prepended to the
+  internal fallback. Chaining `default: post.url | prepend: base_path` would
+  prepend the site URL to the external link too.
+{% endcomment %}
+{% if post.paperurl %}
+  {% assign paper_link = post.paperurl %}
+{% else %}
+  {% assign paper_link = post.url | prepend: base_path %}
+{% endif %}
 
 <div class="pub-item">
   {% if post.header.teaser %}

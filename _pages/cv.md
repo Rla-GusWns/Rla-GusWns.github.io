@@ -25,7 +25,8 @@ Publications
 <ul>
 {% for post in site.publications reversed %}
   <li>
-    <a href="{{ post.paperurl | default: post.url | prepend: base_path }}">{{ post.title }}</a><br />
+    {% if post.paperurl %}{% assign pub_link = post.paperurl %}{% else %}{% assign pub_link = post.url | prepend: base_path %}{% endif %}
+    <a href="{{ pub_link }}">{{ post.title }}</a><br />
     <span class="cv-citation">{{ post.citation }}</span>
   </li>
 {% endfor %}
