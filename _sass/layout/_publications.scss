@@ -44,6 +44,12 @@
 
     a {
       text-decoration: none;
+
+      // the title is now the only link to the paper, so make it react on hover
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 

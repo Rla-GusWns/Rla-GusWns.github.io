@@ -8,8 +8,10 @@
     header.teaser - figure path; without "://" it resolves under /images/
     authors       - author list; wrap your own name in <b>...</b>
     venue, date   - shown together as "Venue, Year"
-    paperurl, projecturl, slidesurl, bibtexurl
-                  - rendered as "Paper | Project Page | Slides | Bibtex"
+    paperurl      - the figure and the title both link here, so it gets no
+                    link of its own below
+    projecturl, slidesurl, bibtexurl
+                  - rendered as "Project Page | Slides | Bibtex"
 
   Falls back to `citation` when `authors` is not set. If no teaser is set, the
   text simply spans the full width.
@@ -46,7 +48,6 @@
     {% endif %}
 
     {% assign parts = "" %}
-    {% if post.paperurl %}{% capture parts %}{{ parts }}<a href="{{ post.paperurl }}">Paper</a>|{% endcapture %}{% endif %}
     {% if post.projecturl %}{% capture parts %}{{ parts }}<a href="{{ post.projecturl }}">Project Page</a>|{% endcapture %}{% endif %}
     {% if post.slidesurl %}{% capture parts %}{{ parts }}<a href="{{ post.slidesurl }}">Slides</a>|{% endcapture %}{% endif %}
     {% if post.bibtexurl %}{% capture parts %}{{ parts }}<a href="{{ post.bibtexurl }}">Bibtex</a>|{% endcapture %}{% endif %}
