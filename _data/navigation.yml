@@ -14,17 +14,6 @@ main:
   - title: "CV"
     url: /cv/
 
-  # - title: "CV"
-  #   url: /cv-json/
-
-  # Removed from the header (pages still exist and are reachable by URL):
-  # - title: "Talks"
-  #   url: /talks/
-  # - title: "Teaching"
-  #   url: /teaching/
-  # - title: "Portfolio"
-  #   url: /portfolio/
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-  # - title: "Guide"
-  #   url: /markdown/
+  # The template's Talks, Teaching, Portfolio, Blog Posts and Guide pages were
+  # deleted, so there is nothing left to link to. To bring one back, restore the
+  # page under _pages/ and add its title and url here.

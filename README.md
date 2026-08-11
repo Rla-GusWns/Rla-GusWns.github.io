@@ -1,7 +1,7 @@
-# HyunJun Kim — Academic Homepage
+# Hyunjun Kim — Academic Homepage
 
 Source for [rla-guswns.github.io](https://rla-guswns.github.io), the personal
-academic website of HyunJun Kim (김현준), Integrated M.S./Ph.D. student in
+academic website of Hyunjun Kim (김현준), Integrated M.S./Ph.D. student in
 Intelligence Robotics at Sungkyunkwan University ([RISE LAB](https://rise.skku.edu/)).
 
 ## Content

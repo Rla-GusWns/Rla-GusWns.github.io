@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "HyunJun Kim"
+title                    : "Hyunjun Kim"
 title_separator          : "-"
-name                     : &name "HyunJun Kim"
-description              : &description "HyunJun Kim's academic portfolio - Vision-Language-Action (VLA) models and vision-based object recognition"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Hyunjun Kim"
+description              : &description "Hyunjun Kim's academic portfolio - Vision-Language-Action (VLA) models and vision-based object recognition"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://rla-guswns.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,7 +24,7 @@ repository               : "Rla-GusWns/Rla-GusWns.github.io"
 author:
   # Biographic information
   avatar           : "profile-hyunjun.jpg"
-  name             : "HyunJun Kim (김현준)"
+  name             : "Hyunjun Kim (김현준)"
   pronouns         : # example: "she/her"
   bio              : "Robotics"
   location         : "Suwon, South Korea"
