@@ -1,0 +1,48 @@
+{% include base_path %}
+
+{% comment %}
+  Compact publication row for the front page and /publications/: one
+  representative figure on the left, then title / authors / venue on the right.
+
+  Front matter fields used:
+    header.teaser - figure path; without "://" it resolves under /images/
+    authors       - author list; wrap your own name in <b>...</b>
+    venue, date   - shown together as "Venue, Year"
+    paperurl, projecturl, slidesurl, bibtexurl
+                  - rendered as "Paper | Project Page | Slides | Bibtex"
+
+  Falls back to `citation` when `authors` is not set. If no teaser is set, the
+  text simply spans the full width.
+{% endcomment %}
+
+{% assign paper_link = post.paperurl | default: post.url | prepend: base_path %}
+
+<div class="pub-item">
+  {% if post.header.teaser %}
+    <div class="pub-item__teaser">
+      <a href="{{ paper_link }}">
+        <img src="{% if post.header.teaser contains "://" %}{{ post.header.teaser }}{% else %}{{ post.header.teaser | prepend: "/images/" | prepend: base_path }}{% endif %}" alt="{{ post.title | escape }}">
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="pub-item__body">
+    <h3 class="pub-item__title"><a href="{{ paper_link }}">{{ post.title }}</a></h3>
+
+    {% if post.authors %}
+      <p class="pub-item__authors">{{ post.authors }}</p>
+      <p class="pub-item__venue"><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+    {% elsif post.citation %}
+      <p class="pub-item__authors">{{ post.citation }}</p>
+    {% endif %}
+
+    {% assign parts = "" %}
+    {% if post.paperurl %}{% capture parts %}{{ parts }}<a href="{{ post.paperurl }}">Paper</a>|{% endcapture %}{% endif %}
+    {% if post.projecturl %}{% capture parts %}{{ parts }}<a href="{{ post.projecturl }}">Project Page</a>|{% endcapture %}{% endif %}
+    {% if post.slidesurl %}{% capture parts %}{{ parts }}<a href="{{ post.slidesurl }}">Slides</a>|{% endcapture %}{% endif %}
+    {% if post.bibtexurl %}{% capture parts %}{{ parts }}<a href="{{ post.bibtexurl }}">Bibtex</a>|{% endcapture %}{% endif %}
+    {% if parts != "" %}
+      <p class="pub-item__links">{{ parts | split: "|" | join: " | " }}</p>
+    {% endif %}
+  </div>
+</div>
