@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an Integrated M.S./Ph.D. student in the Robotics and Intelligent System Engineering Lab ([RISE LAB](https://rise.skku.edu/)) at Sungkyunkwan University (SKKU), supervised by Prof. [Hyungpil Moon](https://scholar.google.com/citations?hl=ko&user=kBU7Os0AAAAJ).
+Integrated M.S./Ph.D. student in the Robotics and Intelligent System Engineering Lab ([RISE LAB](https://rise.skku.edu/)) at Sungkyunkwan University (SKKU), supervised by Prof. [Hyungpil Moon](https://scholar.google.com/citations?hl=ko&user=kBU7Os0AAAAJ).
 
 I received my B.S. degree in the School of Robotics from Kwangwoon University in 2025. My research interests include Vision-Language-Action (VLA) models and vision-based object recognition.
 
