@@ -10,6 +10,7 @@ venue: 'arXiv preprint arXiv:2607.20912'
 header:
   teaser: publications/urf.png
 paperurl: 'https://arxiv.org/abs/2607.20912'
+projecturl: 'https://jiyou384.github.io/urf_project_page/'
 citation: 'Jiyou Shin, Youngjin Seo, Jaeseog Won, Sungwon Seo, <b>Hyunjun Kim</b>, Seokmin Yoon, Tuan Luong, and Hyungpil Moon. (2026). &quot;URF: A Unified Robot Control-Policy Framework for Stable Contact Aware Manipulation.&quot; <i>arXiv preprint</i> arXiv:2607.20912.'
 ---
 
